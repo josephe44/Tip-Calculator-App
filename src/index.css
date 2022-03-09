@@ -1,13 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Space Mono', monospace;
+  background-color: #c5e4e7;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  color: #32b3a6;
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin: 20px 0;
+}
+
+.card-output {
+  width: 250px;
+  background-color: #00474b;
+  color: white;
+}
+
+.tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+.tip p {
+  font-size: 12px;
+}
+
+.tip p > span {
+  display: block;
+  font-size: 10px;
+}
+
+.tip-last {
+  margin-bottom: 70px;
+}
+
+.tip-form {
+  margin: 20px;
+}
+
+.btn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+
+button {
+  font-family: inherit;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  background: #5ec1ac;
+  color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+input {
+  
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  font-size: inherit;
+  font-weight: 700;
+  width: 100%;
+  text-align: right;
+  padding: 5px 0;
+}
+
+input:focus {
+  outline: none;
+  border: #32b3a6 2px solid;
+}
+
+form {
+  position: relative;
+}
+
+.icon {
+  z-index: 1000;
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+}
+
+.space.errorLine {
+  border: 2px solid red; 
+}
+
+input[type]::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.space {
+  padding-right: 10px;
+}
+
+label {
+  font-size: 12px;
+}
+
+.error {
+  margin-left: 55px;
+  color: red;
+  font-size: 12px;
+  text-align: left;
+}
+
+.tip-btn {
+  width: 100%;
+  list-style-type: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.tip-btn li {
+  position: relative;
+  font-family: inherit;
+  font-size: 16px;
+  border: none;
+  padding: 20px;
+}
+
+.tip-btn label,
+.tip-btn input {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(189, 41%, 97%);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tip-btn input[type='radio'] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.tip-btn input::-webkit-outer-spin-button,
+.tip-btn input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tip-btn input[type='radio']:checked + label,
+.Checked + label {
+  background: #5ec1ac;
+}
+
+.tip-btn label {
+  padding: 10px;
+  cursor: pointer;
+  z-index: 90;
+}
+
+/* .tip-btn label:hover {
+  background: #ddd;
+} */
+
+@media (max-width: 600px) {
+  .header {
+    margin-top: 50px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 }
