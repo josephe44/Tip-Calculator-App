@@ -17,9 +17,9 @@ function TipCalculForm() {
   const [value, setValue] = useState('')
 
   const handleCustomTip = (e) => {
-    let custom = Number(e.target.value)
+    let custom = e.target.value
     setValue(custom)
-    console.log(custom)
+    setTip(custom)
   }
 
   const handleChange = (e) => {
@@ -49,7 +49,7 @@ function TipCalculForm() {
   }
 
   const calculateTip = () => {
-    let result = (((tip / 100) * bill) / people).toFixed(2)
+    let result = parseFloat((((tip / 100) * bill) / people).toFixed(2));
     if (result === 'NaN') {
       result = Number(0).toFixed(2)
     }
@@ -57,7 +57,7 @@ function TipCalculForm() {
   }
 
   const calculateTotal = () => {
-    let resultA = (bill / people + ((tip / 100) * bill) / people).toFixed(2)
+    let resultA = parseFloat((bill / people + ((tip / 100) * bill) / people).toFixed(2));
 
     if (resultA === 'NaN') {
       resultA = Number(0).toFixed(2)
