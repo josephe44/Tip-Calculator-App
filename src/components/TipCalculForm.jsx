@@ -19,6 +19,7 @@ function TipCalculForm() {
   const handleCustomTip = (e) => {
     let custom = Number(e.target.value)
     setValue(custom)
+    setTip(custom)
     console.log(custom)
   }
 
